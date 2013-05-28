@@ -1,4 +1,10 @@
-if(document.getElementById('AutoPokeHeader') != null)
+var FacebookURL1 = 'https://www.facebook.com/pokes';
+var FacebookURL2 = 'http://www.facebook.com/pokes';
+var CurrentURL = window.location.href;
+
+if(CurrentURL.substr(0,FacebookURL1.length) != FacebookURL1 && CurrentURL.substr(0, FacebookURL2.length) != FacebookURL2)
+	alert("Vous n'ête pas sur la bonne page, dirigez vous vers " + FacebookURL2 + " et réessayez");
+else if(document.getElementById('AutoPokeHeader') != null)
 	alert('AutoPoke est déjà installé sur la page');
 else
 {
