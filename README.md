@@ -1,7 +1,7 @@
 AutoPoke
 ========
 
-Bookmarklet pour facebook permettant de répondre aux poke automatiquement
+Bookmarklet pour facebook permettant de répondre aux pokes automatiquement
 
 
 Auteur
