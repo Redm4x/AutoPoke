@@ -70,15 +70,16 @@ else
 
 	var AutoPokeHeader = document.createElement("span");
 	AutoPokeHeader.id = "AutoPokeHeader";
-	AutoPokeHeader.style.backgroundColor = 'grey';
+	AutoPokeHeader.style.backgroundColor = 'white';
+	AutoPokeHeader.style.border = 'solid black 1px';
 	AutoPokeHeader.style.padding = '5px';
 	AutoPokeHeader.style.marginLeft = '10px';
 	AutoPokeHeader.style.color = 'black';
 
 	AutoPokeHeader.innerHTML = "AutoPoke <span id='AutoPokeStatus'>hors fonction</span> : ";
 	AutoPokeHeader.innerHTML += "<button id='AutoPokeButton' type='button'>Démarrer</button>";
-	AutoPokeHeader.innerHTML += " <a href='#' id='AutoPokeInfoButton'>?</a>";
-	AutoPokeHeader.innerHTML += " <a href='#' id='AutoPokeRemoveButton'>&times;</a>";
+	AutoPokeHeader.innerHTML += " <a href='#' id='AutoPokeInfoButton' title='Infos'>?</a>";
+	AutoPokeHeader.innerHTML += " <a href='#' id='AutoPokeRemoveButton' title='Supprimer'>&times;</a>";
 
 	PageTitle.appendChild(AutoPokeHeader);
 
