@@ -66,17 +66,21 @@ else
 		alert("Créateur : Redm4x\nDernière mise à jour : 28 mai 2013");
 	}
 
-	var Title = document.querySelector('h2.uiHeaderTitle');
+	var PageTitle = document.querySelector('h2.uiHeaderTitle');
 
 	var AutoPokeHeader = document.createElement("span");
 	AutoPokeHeader.id = "AutoPokeHeader";
 	AutoPokeHeader.style.backgroundColor = 'grey';
-	AutoPokeHeader.style.padding = 5+'px';
-	AutoPokeHeader.style.marginLeft = 10+'px';
+	AutoPokeHeader.style.padding = '5px';
+	AutoPokeHeader.style.marginLeft = '10px';
+	AutoPokeHeader.style.color = 'black';
 
-	AutoPokeHeader.innerHTML = "<span>AutoPoke <span id='AutoPokeStatus'>hors fonction</span></span> : <button id='AutoPokeButton' type='button'>Démarrer</button> <a href='#' id='AutoPokeInfoButton'>?</a> <a href='#' id='AutoPokeRemoveButton'>&times;</a>";
+	AutoPokeHeader.innerHTML = "AutoPoke <span id='AutoPokeStatus'>hors fonction</span> : ";
+	AutoPokeHeader.innerHTML += "<button id='AutoPokeButton' type='button'>Démarrer</button>";
+	AutoPokeHeader.innerHTML += " <a href='#' id='AutoPokeInfoButton'>?</a>";
+	AutoPokeHeader.innerHTML += " <a href='#' id='AutoPokeRemoveButton'>&times;</a>";
 
-	Title.appendChild(AutoPokeHeader);
+	PageTitle.appendChild(AutoPokeHeader);
 
 	document.getElementById('AutoPokeButton').onclick = AutoPoke_SwitchStatus;
 	document.getElementById('AutoPokeRemoveButton').onclick = AutoPoke_Remove;
