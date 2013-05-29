@@ -27,30 +27,26 @@ else
 
 	function AutoPoke_Start()
 	{
+		document.getElementById('AutoPokeStatus').innerHTML = "en marche";
+		document.getElementById('AutoPokeButton').innerHTML = "Arrêter";
 		AutoPoke_Verif();
+		AutoPoke_Running = true;
 	}
 
 	function AutoPoke_Stop()
 	{
+		document.getElementById('AutoPokeStatus').innerHTML = "hors fonction";
+		document.getElementById('AutoPokeButton').innerHTML = "Démarrer";
 		window.clearTimeout(AutoPoke_Timer);
+		AutoPoke_Running = false;
 	}
 
 	function AutoPoke_SwitchStatus()
 	{
 		if(!AutoPoke_Running)
-		{
-			document.getElementById('AutoPokeStatus').innerHTML = "en marche";
-			document.getElementById('AutoPokeButton').innerHTML = "Arrêter";
 			AutoPoke_Start();
-			AutoPoke_Running = true;
-		}
 		else
-		{
-			document.getElementById('AutoPokeStatus').innerHTML = "hors fonction";
-			document.getElementById('AutoPokeButton').innerHTML = "Démarrer";
 			AutoPoke_Stop();
-			AutoPoke_Running = false;
-		}
 	}
 
 	function AutoPoke_Remove()
@@ -62,7 +58,7 @@ else
 
 	function AutoPoke_Info()
 	{
-		alert("Créateur : Redm4x\nDernière mise à jour : 28 mai 2013");
+		alert("Créateur : Redm4x\nDernière mise à jour : 29 mai 2013");
 	}
 
 	var PageTitle = document.querySelector('h2.uiHeaderTitle');
