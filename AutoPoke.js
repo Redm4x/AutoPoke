@@ -1,7 +1,8 @@
 var CurrentURL = window.location.hostname + window.location.pathname;
+var FacebookURL = "www.facebook.com/pokes";
 
-if(CurrentURL != "www.facebook.com/pokes")
-	alert("Vous n'êtes pas sur la bonne page, dirigez vous vers " + FacebookURL2 + " et réessayez");
+if(CurrentURL != FacebookURL)
+	alert("Vous n'êtes pas sur la bonne page, dirigez vous vers " + FacebookURL + " et réessayez");
 else if(document.getElementById('AutoPokeHeader') != null)
 	alert('AutoPoke est déjà installé sur la page');
 else
