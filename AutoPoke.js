@@ -14,12 +14,15 @@ else
 	{
 		console.log('Checking pokes');
 
-		var PokeList = document.querySelectorAll('.pokesDashboard .uiIconText');
-		for(var i = 0 ; i < PokeList.length ; i++)
+		var PokeDashboard = document.getElementsByClassName('pokesDashboard')[0];
+		var PokeItems = PokeDashboard.getElementsByClassName('objectListItem');
+
+		for(var i = 0 ; i < PokeItems.length ; i++)
 		{
-			console.log('Clicking one poke');
-			var Poke = PokeList[i];
-			Poke.click();
+			var PokeItem = PokeItems[i];
+			var PokeLink = PokeItem.getElementsByTagName('table')[0].getElementsByTagName('a')[0];
+			
+			PokeLink.click();
 		}
 
 		AutoPoke_Timer = setTimeout(AutoPoke_Verif, 2000);
@@ -58,7 +61,7 @@ else
 
 	function AutoPoke_Info()
 	{
-		alert("Créateur : Redm4x\nDernière mise à jour : 29 mai 2013");
+		alert("Créateur : Redm4x\nDernière mise à jour : 25 août 2013");
 	}
 
 	var PageTitle = document.querySelector('h2.uiHeaderTitle');
