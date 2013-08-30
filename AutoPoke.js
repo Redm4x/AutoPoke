@@ -61,7 +61,7 @@ else
 
 	function AutoPoke_Info()
 	{
-		alert("Créateur : Redm4x\nDernière mise à jour : 25 août 2013");
+		alert("Créateur : Redm4x\nDernière mise à jour : 29 août 2013");
 	}
 
 	var PageTitle = document.querySelector('h2.uiHeaderTitle');
