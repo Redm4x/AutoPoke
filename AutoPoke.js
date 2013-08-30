@@ -12,9 +12,9 @@ else
 
 	function AutoPoke_Verif()
 	{
-		console.log('Checking pokes');
+		//console.log('Checking pokes');
 
-		var PokeDashboard = document.getElementsByClassName('pokesDashboard')[0];
+		var PokeDashboard = document.getElementById('pagelet_pokes');
 		var PokeItems = PokeDashboard.getElementsByClassName('objectListItem');
 
 		for(var i = 0 ; i < PokeItems.length ; i++)
